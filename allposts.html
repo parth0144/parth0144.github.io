@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="poststyle.css">
+    <title>FitVerse - Posts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        .post-content {
+            font-size: 18px;
+        }
+        .vote-buttons button {
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+        .comments {
+            margin-top: 10px;
+        }
+        .comments ul {
+            list-style: none;
+            padding: 0;
+        }
+        .comments li {
+            margin-bottom: 10px;
+        }
+        .comment-input textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Posts</h1>
+
+    <!-- Example Post 1 -->
+    <div class="post" style="background-color:#ffebcd">
+
+        <div class="content">
+            <div class="image">
+                <img src="https://imgs.search.brave.com/mdh9Qcx5j5C51v_Og5ybkX9fSZ2M_rK2IHxlAg0tJbs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9vcmln/eW1wZXJzb25hbHRy/YWluZXJjb3Vyc2Vz/LmNvLnVrL2ZpbGVz/L2ltZ19jYWNoZS8z/MTc1Ni8xOTIwXzE2/NjE5NTIyMDhfQmxv/Z0ltYWdlc19KdW5l/X0NfNDMyLnBuZz8x/NjYxOTUyMjQ2"
+                     width="300" height="300">
+            </div>
+            <div class="post-content">
+                <p>In the realm of fitness, perseverance is the linchpin of success. It's easy to be motivated at the outset, but maintaining that drive when faced with obstacles is what separates the achievers from the quitters. Fitness is not just a goal; it's a lifestyle, a choice to constantly strive for improvement. Whether it's a grueling workout or a day when you'd rather stay in bed, pushing through and staying consistent is crucial.
+
+                    The journey is a tapestry of highs and lows, plateaus and breakthroughs. Every setback is an opportunity to prove your resilience and determination. Each time you choose to lace up your shoes and hit the gym, you're affirming your commitment to a healthier and stronger version of yourself.
+                    
+                    Moreover, the benefits of this persistence extend beyond the physical. Exercise releases endorphins, the body's natural mood lifters, promoting mental well-being and reducing stress. It cultivates discipline, time management, and a positive mindset, qualities that echo in other facets of life.
+                    
+                    In essence, the fitness journey is an ode to the power of continuous effort. Embrace it, cherish it, and keep going. For in the relentless pursuit of your fitness goals, you'll not only sculpt your body but also forge a determined, resilient spirit capable of conquering any challenge that life throws your way.</p>
+            </div>   
+        </div>
+
+        <div class="vote-buttons" style="display: flex; flex-direction: row; text-align: center; justify-content: center;" >
+            <button style="padding: 10px 20px;" onclick="upvote(1)">Upvote</button>
+            <button style="padding: 10px 20px;" onclick="downvote(1)">Downvote</button>
+        </div>
+
+        <div id="comments1" class="comments">
+            <h3>Comments</h3>
+            <ul id="commentList1">
+                <!-- Comments will appear here -->
+            </ul>
+        </div>
+        <div class="comment-input">
+            <textarea id="commentText1" placeholder="Add a comment"></textarea>
+            <button onclick="addComment(1)">Add Comment</button>
+        </div>
+        <div id="votes1">Upvotes: 0, Downvotes: 0</div>
+    </div>
+
+    <script>
+        const comments = {
+            1: []
+        };
+
+        const votes = {
+            1: { upvotes: 0, downvotes: 0 }
+        };
+
+        function upvote(postId) {
+            votes[postId].upvotes++;
+            updateVoteDisplay(postId);
+        }
+
+        function downvote(postId) {
+            votes[postId].downvotes++;
+            updateVoteDisplay(postId);
+        }
+
+        function addComment(postId) {
+            const commentText = document.getElementById(`commentText${postId}`).value;
+            if (commentText) {
+                comments[postId].push(commentText);
+                updateComments(postId);
+                document.getElementById(`commentText${postId}`).value = '';
+            }
+        }
+
+        function updateComments(postId) {
+            const commentList = document.getElementById(`commentList${postId}`);
+            commentList.innerHTML = '';
+            comments[postId].forEach(comment => {
+                const li = document.createElement('li');
+                li.textContent = comment;
+                commentList.appendChild(li);
+            });
+        }
+
+        function updateVoteDisplay(postId) {
+            const voteDisplay = document.getElementById(`votes${postId}`);
+            voteDisplay.textContent = `Upvotes: ${votes[postId].upvotes}, Downvotes: ${votes[postId].downvotes}`;
+        }
+    </script>
+
+    
+    <div class="post2">
+        <div class="content2">
+      <div class="image2"> <img src="https://imgs.search.brave.com/RSz9UZQ7AoYjDCqglFuKJhPjId70lVIOTLSndOG2UWk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTEy/MDg1NzExL3Bob3Rv/L2RlYWRsaWZ0Lmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0w/RkRLRWxpeUdISjhR/SkIxR19VTzZ5eDhm/NEpQZGtZZUdtc3Fp/LWFWMnkwPQ"
+        width="300" height="300">
+    </div>
+    <div class="post2content"><p>The deadlift is often hailed as the "king of lifts" in the realm of strength training. It's a compound movement, meaning it engages multiple muscle groups and joints simultaneously. The primary muscles involved are the quadriceps, hamstrings, glutes, lower back, and traps. Additionally, it activates the core and grip strength.
+
+        This exercise is a test of raw strength and power. It requires you to lift a heavy weight from the ground, maintaining a straight back and neutral spine throughout the movement. The correct form is crucial to prevent injuries and maximize its benefits.
+        
+        Deadlifts are not only about building muscle and strength but also about improving functional fitness. They mimic real-world movements like lifting heavy objects, making them practical for everyday life. Regularly incorporating deadlifts into your fitness routine can lead to increased muscle mass, improved posture, enhanced bone density, and a more resilient lower back.
+        
+        There are variations of the deadlift, including the conventional deadlift, sumo deadlift, Romanian deadlift, and trap bar deadlift, each focusing on specific muscle groups and providing unique benefits. It's essential to choose the right variation based on your fitness goals and preferences.
+        
+        Always prioritize safety and proper technique when performing the deadlift to reap its full rewards and avoid any potential injuries. It's advisable to learn the movement under the guidance of a certified fitness professional, especially if you're a beginner.</p></div>
+</div>     
+
+<div class="interactions"  style="display: flex; flex-direction: row; text-align: center; justify-content: center;"">
+    <button style="padding: 10px 20px;" onclick="upvote(2)">Upvote</button>
+    <button style="padding: 10px 20px;" onclick="downvote(2)">Downvote</button>
+</div>
+<div class="votes" id="votes2">Upvotes: 0, Downvotes: 0</div>
+<div class="comments2">
+    <h3>Comments</h3>
+    <ul id="commentList2">
+        <!-- Comments will appear here -->
+    </ul>
+    <div class="comment2hold">
+    <textarea id="commentText2" placeholder="Add a comment"></textarea>
+    <button onclick="addComment(2)">Add Comment</button>
+    </div>
+</div>
+</div>
+
+<script>
+// Object to store comments for each post
+const comments2 = {
+    1: [],
+    2: []
+};
+
+// Object to store votes for each post
+const votes2 = {
+    1: { upvotes: 0, downvotes: 0 },
+    2: { upvotes: 0, downvotes: 0 }
+};
+
+function upvote(postId) {
+    votes2[postId].upvotes++;
+    updateVoteDisplay(postId);
+}
+
+function downvote(postId) {
+    votes2[postId].downvotes++;
+    updateVoteDisplay(postId);
+}
+
+function addComment(postId) {
+    const commentText = document.getElementById(`commentText${postId}`).value;
+    if (commentText) {
+        comments2[postId].push(commentText);
+        updateComments(postId);
+        document.getElementById(`commentText${postId}`).value = '';
+    }
+}
+
+function updateComments(postId) {
+    const commentList = document.getElementById(`commentList${postId}`);
+    commentList.innerHTML = '';
+    comments2[postId].forEach(comment => {
+        const li = document.createElement('li');
+        li.textContent = comment;
+        commentList.appendChild(li);
+    });
+}
+
+function updateVoteDisplay(postId) {
+    const voteDisplay = document.getElementById(`votes${postId}`);
+    voteDisplay.textContent = `Upvotes: ${votes2[postId].upvotes}, Downvotes: ${votes2[postId].downvotes}`;
+}
+</script>
+
+
+
+</body>
+</html>

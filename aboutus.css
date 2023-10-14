@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffebcd; /* Light gray background */
+}
+
+.about-us-content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #FFA600; /* Bright orange background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content h1 {
+    font-size: 36px;
+    color: #333; /* Dark gray text */
+    margin-bottom: 10px;
+}
+
+.about-us-content p {
+    font-size: 18px;
+    color: #333; /* Dark gray text */
+    line-height: 1.6;
+}

@@ -1,0 +1,157 @@
+body {
+    background-image: url('https://imgs.search.brave.com/ghjGX0zxkVkGfaTw0qZaMZm9cSokT7qm9tQrHwFvwFg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9n/eW0taGFuZHNvbWUt/bWFuLWR1cmluZy13/b3Jrb3V0XzE0NDYy/Ny02MjM2LmpwZz9z/aXplPTYyNiZleHQ9/anBn '); /* Replace with the correct image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #1b1b1b; /* Fallback background color */
+    color: #ffffff; /* Color for text */
+    font-family: Arial, sans-serif;
+}
+
+/* Rest of your CSS styles go here */
+
+
+/* Navbar styles */
+/* Style for the header and nav links */
+/* Style for the header and nav links */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-title {
+    color: orange;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 5px 10px; /* Add padding to create a background for specific links */
+    border-radius: 5px; /* Optional: Rounded corners for the background */
+}
+
+.navbar a:hover {
+    background-color: black; /* Change the background color on hover */
+    color: orange;
+}
+
+/* Style the specific links */
+.navbar a.home,
+.navbar a.workouts,
+.navbar a.nutrition,
+.navbar a.about,
+.navbar a.contact {
+    background-color: black; /* Apply black background to specific links */
+}
+
+
+.navbar-title {
+    color: #ffa31a; /* Yellow */
+    font-weight: bold;
+    font-size: 60px;
+}
+
+/* Header styles */
+header {
+   
+    color: #ffffff; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.intro h1 {
+    color: #ffa31a; /* Yellow */
+    font-size: 36px;
+}
+
+.intro p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    background-color: #ffa31a; /* Yellow */
+    color: #292929; /* Dark gray text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #808080; /* Light gray on hover */
+    color: #ffa31a; /* Yellow text on hover */
+}
+
+/* Add more styles for sections, buttons, etc. */
+/* Style for the footer */
+/* Style for the footer */
+footer {
+    background-color: transparent; /* Remove background color */
+    color: white;
+    padding: 20px; /* Add padding for spacing */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Align links to the center */
+}
+
+/* Style for the social links */
+
+/* Style for the social links */
+/* Style for the social links */
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-links li {
+    margin-right: 20px; /* Increase spacing between links */
+}
+
+.social-links li:last-child {
+    margin-right: 0; /* Remove margin for the last link */
+}
+
+.social-links a {
+    color: rgb(6, 4, 4);
+    text-decoration: none;
+    font-size: 24px; /* Increase the font size */
+}
+
+.social-links a:hover {
+    color: #FF5733; /* Change color on hover */
+}

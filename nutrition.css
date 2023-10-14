@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffa600a1;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* Styling for Nutrition Tips */
+#nutrition-tips {
+    background: #fff; /* Gradient background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+#nutrition-tips h2 {
+    color: #fff; /* White text */
+    font-size: 34px; /* Adjust the font size */
+    margin-bottom: 10px; /* Add some spacing */
+}
+
+#nutrition-tips p {
+    color: #fff; /* White text */
+    font-size: 20px;
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
